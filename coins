@@ -65,7 +65,7 @@ color2="FFFFFF",
 conky.text = [[
 \
 \
-${execi 300  curl -H "X-CMC_PRO_API_KEY: b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c" -H "Accept: application/json" -d "start=1&limit=20&convert=EUR" -G https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest | jq . > ~/conky-crypto-coins/rates.json}\
+${execi 300  curl -H "X-CMC_PRO_API_KEY: 44911ce3-2f77-4fc6-997a-2653171c09b5" -H "Accept: application/json" -d "start=1&limit=20&convert=EUR" -G https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest | jq . > ~/conky-crypto-coins/rates.json}\
 \
 \
 \
