@@ -92,8 +92,8 @@ ${color2}${voffset 53}${alignc 77}${execi 0 echo "scale=3; $(cat ~/conky-crypto-
 ${color2}${voffset -15}${alignc}${execi 0 echo "scale=3; $(cat ~/conky-crypto-coins/rates.json | jq '.data[] | select(.symbol == "LTC") | .quote.EUR.price')/1" | bc}
 ${color2}${voffset -15}${alignc -77}${execi 0  echo "scale=3; $(cat ~/conky-crypto-coins/rates.json | jq '.data[] | select(.symbol == "XMR") | .quote.EUR.price'')/1" | bc}
 ${image ~/conky-crypto-coins/images/btc.png -p 42,75 -s 32x32}\
-${image ~/conky-crypto-coins/images/eth.png -p 118,75 -s 32x32}\
-${image ~/conky-crypto-coins/images/ltc.png -p 194,75 -s 32x32}${font}\
+${image ~/conky-crypto-coins/images/ltc.png -p 118,75 -s 32x32}\
+${image ~/conky-crypto-coins/images/xmr.png -p 194,75 -s 32x32}${font}\
 \
 \
 \
