@@ -75,8 +75,6 @@ ${image ~/conky-crypto-coins/images/bottom-bg.png -p 20,175 -s 228x150}\
 ${image ~/conky-crypto-coinss/images/border.png -p 20,25 -s 228x265}\
 ${image ~/conky-crypto-coins/images/separator-v.png -p 95,50 -s 1x83}\
 ${image ~/conky-crypto-coins/images/separator-v.png -p 172,50 -s 1x83}\
-${image ~/conky-crypto-coins/images/separator-v.png -p 95,180 -s 1x83}\
-${image ~/conky-crypto-coins/images/separator-v.png -p 172,180 -s 1x83}\
 \
 \
 \
@@ -90,25 +88,8 @@ ${color2}${voffset -15}${alignc -77}LTC
 \
 ${color2}${voffset 53}${alignc 77}${execi 0 echo "scale=3; $(cat ~/conky-crypto-coins/rates.json | jq '.data[] | select(.symbol == "BTC") | .quote.EUR.price')/1" | bc}
 ${color2}${voffset -15}${alignc}${execi 0 echo "scale=3; $(cat ~/conky-crypto-coins/rates.json | jq '.data[] | select(.symbol == "LTC") | .quote.EUR.price')/1" | bc}
-${color2}${voffset -15}${alignc -77}${execi 0  echo "scale=3; $(cat ~/conky-crypto-coins/rates.json | jq '.data[] | select(.symbol == "XMR") | .quote.EUR.price'')/1" | bc}
+${color2}${voffset -15}${alignc -77}${execi 0  echo "scale=3; $(cat ~/conky-crypto-coins/rates.json | jq '.data[] | select(.symbol == "XMR") | .quote.EUR.price')/1" | bc}
 ${image ~/conky-crypto-coins/images/btc.png -p 42,75 -s 32x32}\
 ${image ~/conky-crypto-coins/images/ltc.png -p 118,75 -s 32x32}\
-${image ~/conky-crypto-coins/images/xmr.png -p 194,75 -s 32x32}${font}\
-\
-\
-\
-\
-\${color2}${voffset 50}${alignc 77}XMR
-\${color2}${voffset -15}${alignc}BCH
-\${color2}${voffset -15}${alignc -77}DASH
-\
-\
-\
-\
-\${color2}${voffset 53}${alignc 77}${execi 0  echo "scale=3; $(cat ~/conky-crypto-coins/rates.json | jq -r '.[] | select(.symbol == "XMR") | .price_usd')/1" | bc}
-\${color2}${voffset -15}${alignc}${execi 0  echo "scale=3; $(cat ~/conky-crypto-coins/rates.json | jq -r '.[] | select(.symbol == "BCH") | .price_usd')/1" | bc}
-\${color2}${voffset -15}${alignc -77}${execi 0  echo "scale=3; $(cat ~/conky-crypto-coins/rates.json | jq -r '.[] | select(.symbol == "DASH") | .price_usd')/1" | bc}
-\${image ~/conky-crypto-coins/images/xmr.png -p 42,210 -s 32x32}\
-\${image ~/conky-crypto-coins/images/bch.png -p 118,210 -s 32x32}\
-\${image ~/conky-crypto-coins/images/dash.png -p 194,210 -s 32x32}${font}\
+${image ~/conky-crypto-coins/images/xmr.png -p 194,75 -s 32x32}${font}
 ]]
